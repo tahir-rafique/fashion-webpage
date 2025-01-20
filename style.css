@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 25% 50%;
+  grid-template-rows: 24% 56% 20%;
+}
+
+#left-top-left {
+  padding: 30px;
+}
+
+#left-top-right {
+  justify-self: end;
+  text-align: right;
+  padding: 40px;
+}
+
+#left-top-right h4 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+#left-top-right h5 {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+#left-top-right h6 {
+  display: none;
+}
+#left-center {
+  grid-column: 1/3;
+}
+
+#left-center h1 {
+  font-size: 5vw;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 4px;
+}
+
+#left-center h1:nth-child(2n) {
+  text-align: center;
+}
+#left-bottom {
+  grid-column: 1/3;
+  padding: 40px;
+}
+#left-bottom p {
+  width: 70%;
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+}
+#right {
+  grid-column: 3;
+  grid-row: 1/4;
+  padding: 40px;
+  padding-left: 150px;
+}
+#right video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  padding-right: 150px;
+}
+#square {
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  rotate: 45deg;
+}
+
+#arrow {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background-color: orange;
+  padding: 20px;
+  border-radius: 50%;
+  color: white;
+}
+#arrow i {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  #main {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 60px 34% 8%;
+  }
+
+  #left-top-left {
+    padding: 20px;
+  }
+
+  #left-top-right {
+    /* justify-self: end; */
+    text-align: right;
+    padding: 20px;
+  }
+
+  #left-top-right h4 {
+    display: none;
+  }
+  #left-top-right h5 {
+    display: none;
+  }
+  #left-top-right h6 {
+    display: initial;
+    font-size: 20px;
+  }
+  #left-center {
+    padding: 10px 20px;
+  }
+
+  #left-center h1 {
+    font-size: 12vw;
+    line-height: 10vw;
+  }
+
+  #left-center h1:nth-child(2n) {
+    text-align: right;
+  }
+  #left-bottom {
+    padding: 5px 20px;
+  }
+  #left-bottom p {
+    width: 90%;
+    font-size: 8px;
+  }
+
+  #right video {
+    height: 42vh;
+    padding-right: 0px;
+  }
+
+  #square {
+    height: 15px;
+    width: 15px;
+  }
+
+  #arrow {
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    padding: 10px;
+  }
+  #arrow i {
+    font-size: 20px;
+  }
+
+  #right {
+    grid-column: 1/4;
+    grid-row: 4;
+    padding: 10px;
+    padding-right: 5px;
+  }
+}
